@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicit-grid</title>
+    <link rel="stylesheet" href="css-reset.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            font-size: 1.5rem;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: minmax(auto, 50%) 1fr 5em;
+            grid-template-rows: minmax(100px, auto); 
+            gap: 3px;
+        }
+        .grid-container div {
+            display: flex;
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores mollitia aliquam culpa consectetur optio, nulla beatae debitis. Libero quidem deserunt maxime illum cumque vel cum harum, error nam quaerat placeat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eum nisi corrupti velit dolor rem eaque, veniam accusamus ducimus dignissimos quos consequatur aperiam sapiente asperiores a excepturi perspiciatis magni ullam.</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+</body>
+</html>
