@@ -1,11 +1,37 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    display: grid;
+    place-items: center;
+    line-height: normal;
+
     font-family: sans-serif;
     font-size: 2rem;
 }
 
-.grid-container div {
+main {
+    min-height: 80vh;
+    min-width: 80vw;
+}
+
+.grid-item {
+    background-color: #e91e63;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid white;
+    border-radius: .2rem;
+}
+
+/* .grid-container div {
     display: flex;
     border: 1px solid black;
     justify-content: center;
     align-items: center;
-}
+} */

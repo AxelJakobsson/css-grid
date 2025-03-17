@@ -3,14 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explicit-grid</title>
+    <title>Naming and positioning items by grid areas</title>
     <link rel="stylesheet" href="css-reset.css">
     <link rel="stylesheet" href="style.css">
     <style>
         .grid-container {
             display: grid;
-            grid-template-columns: 5.625rem 3.125rem 2fr 1fr;
-            grid-template-rows: 5rem 10rem 3rem;
+
+            grid-template-areas:   "header header"
+                        "content sidebar"
+                        "footer footer";
+            grid-template-rows:    150px 1fr 100px;
+            grid-template-columns: 1fr 200px;
+        }
+        
+
+        .moveable1 {
+            grid-row-start:    header;
+            grid-row-end:      header;
+            grid-column-start: header;
+            grid-column-end:   header;
+        }
+        .moveable2 {
+            grid-area: footer;
+        }
+        .moveable3 {
+            grid-area: sidebar;
+        }
+        .moveable4 {
+            grid-area: content;
         }
     </style>
 </head>
@@ -28,7 +49,10 @@
             <div class="grid-item">9</div>
             <div class="grid-item">10</div>
             <div class="grid-item">11</div>
-            <div class="grid-item">12</div>
+            <div class=" moveable4 grid-item">12</div>
+            <div class=" moveable1 grid-item">13</div>
+            <div class=" moveable2 grid-item">14</div>
+            <div class=" moveable3 grid-item">15</div>
         </div>
     </main>
 </body>
