@@ -13,8 +13,8 @@ body {
 }
 
 main {
-    min-height: 80vh;
-    min-width: 80vw;
+        min-height: 40vh;
+        min-width: 40vw;
 }
 
 .grid-item {
@@ -28,10 +28,3 @@ main {
     border: 1px solid white;
     border-radius: .2rem;
 }
-
-/* .grid-container div {
-    display: flex;
-    border: 1px solid black;
-    justify-content: center;
-    align-items: center;
-} */
