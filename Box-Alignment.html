@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="css-reset.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .grid-container {
+            display: grid;
+
+            grid-template-rows: 80px 80px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "content content"
+                                 "content content";
+            /* justify-items: center;
+            align-items: center; */
+        }
+        .item-1 {
+            grid-area: content;
+            justify-self: start;
+            align-self: start;
+            padding: 1rem;
+        }
+        .item-2 {
+            grid-area: content;
+            justify-self: center;
+            align-self: center;
+            padding: 1rem;
+        }
+        .item-3 {
+            grid-area: content;
+            justify-self: end;
+            align-self: end;
+            padding: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="grid-container">
+            <div class="item-1 grid-item">1</div>
+            <div class="item-2 grid-item">2</div>
+            <div class="item-3 grid-item">3</div>
+        </div>
+    </main>
+</body>
+</html>
