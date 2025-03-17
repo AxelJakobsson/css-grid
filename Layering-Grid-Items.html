@@ -7,32 +7,80 @@
     <link rel="stylesheet" href="css-reset.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        .grid-container {
+        /* .grid-container {
             display: grid;
 
             grid-template-rows: 1fr 1fr;
 
             grid-template-columns: 1fr 1fr 1fr;
-        }
+        } */
 
-        .item-1, .item-2 {
+        /* .item-1, .item-2 {
             grid-row-start: 1; grid-column-end: span 2; 
         }
-
         .item-1 { grid-column-start: 1; z-index: 1; background-color: green;}
-        .item-2 { grid-column-start: 2;}
+        .item-2 { grid-column-start: 2;} */
+
+
+
+        .grid-container {
+            display: grid;
+            padding: 2rem;
+
+            grid-template-areas:    "header header"
+                                    "content sidebar"
+                                    "footer footer";
+            grid-template-rows:    80px 1fr 40px;
+            grid-template-columns: 1fr 200px;
+        }
+
+        .grid-header {
+            grid-area: header;
+        }
+        .grid-content {
+            grid-area: content;
+        }
+        .grid-footer {
+            grid-area: footer;
+        }
+
+        .grid-sidebar {
+            grid-area: sidebar;
+        }
+        .overlay {
+            grid-row-start:    header-start;
+            grid-row-end:      content-end;
+            grid-column-start: content-start;
+            grid-column-end:   sidebar-start;
+            z-index: 1;
+
+            opacity: 0.66;
+            background-color: green;
+            display: grid;
+            align-items: center;
+            text-align: center;
+        }
 
 
     </style>
 </head>
 <body>
     <main>
-        <div class="grid-container">
+        <!-- <div class="grid-container">
             <div class="item-1 grid-item">1</div>
             <div class="item-2 grid-item">2</div>
             <div class="grid-item">3</div>
             <div class="grid-item">4</div>
             <div class="grid-item">5</div>
+        </div> -->
+
+        <div class="grid-container">
+            
+            <div class="grid-header grid-item">header</div>
+            <div class="grid-content grid-item">content</div>
+            <div class="grid-item">sidebar</div>
+            <div class="grid-footer grid-item">footer</div>
+            <div class="overlay">overlay</div>
         </div>
     </main>
 </body>
