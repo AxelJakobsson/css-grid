@@ -3,16 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid-container</title>
+    <title>Gutters</title>
     <link rel="stylesheet" href="css-reset.css">
     <link rel="stylesheet" href="style.css">
     <style>
         .grid-container {
             display: grid;
+            gap: 4rem;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            
         }
+
     </style>
 </head>
 <body>
+    <div class="navigation">
+        <a href="04-repeating-grid.html"class="prev">←</a>
+        <a href="06-positioning-grid-lines.html" class="next">→</a>
+    </div>
     <main>
         <div class="grid-container">
             <div class="grid-item">1</div>
@@ -21,6 +29,12 @@
             <div class="grid-item">4</div>
             <div class="grid-item">5</div>
             <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>
+            <div class="grid-item">10</div>
+            <div class="grid-item">11</div>
+            <div class="grid-item">12</div>
         </div>
     </main>
 </body>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Positioning Items by Line Names</title>
+    <title>Naming Grid Lines</title>
     <link rel="stylesheet" href="css-reset.css">
     <link rel="stylesheet" href="style.css">
     <style>
@@ -16,14 +16,18 @@
 
 
         .movable {
-            grid-row: row-2-start / row-end;
-            grid-column: col-start / col-2-end;
+            grid-row: 2 / span 3; /*  Starta på rad 2 och slutar på 3 rader efter*/
+            grid-column: span 2; /* Täck de nästa 2 raderna från dens nuvarande position*/
             background-color: rgb(24, 167, 124);
         }
 
     </style>
 </head>
 <body>
+    <div class="navigation">
+        <a href="07-spanning-items.html" class="prev">←</a>
+        <a href="09-positioning-by-line-names.html" class="next">→</a>
+    </div>
     <main>
         <div class="grid-container teal-color">
             <div class="grid-item">1</div>

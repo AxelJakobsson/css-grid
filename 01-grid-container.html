@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explicit-grid</title>
+    <title>Grid-container</title>
     <link rel="stylesheet" href="css-reset.css">
     <link rel="stylesheet" href="style.css">
     <style>
         .grid-container {
             display: grid;
-            grid-template-columns: 5.625rem 3.125rem 2fr 1fr;
-            grid-template-rows: 5rem 10rem 3rem;
         }
     </style>
 </head>
 <body>
+    <div class="navigation">
+    <div class="prev"></div>
+    <a href="02-explicit-grid.html" class="next">→</a>
+</div>
     <main>
+        
         <div class="grid-container">
             <div class="grid-item">1</div>
             <div class="grid-item">2</div>
@@ -23,12 +26,6 @@
             <div class="grid-item">4</div>
             <div class="grid-item">5</div>
             <div class="grid-item">6</div>
-            <div class="grid-item">7</div>
-            <div class="grid-item">8</div>
-            <div class="grid-item">9</div>
-            <div class="grid-item">10</div>
-            <div class="grid-item">11</div>
-            <div class="grid-item">12</div>
         </div>
     </main>
 </body>

@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-    display: grid;
+    /* display: grid; */
     place-items: center;
     line-height: normal;
 
@@ -27,4 +27,24 @@ main {
 
     border: 1px solid white;
     border-radius: .2rem;
+}
+
+.navigation {
+    position: fixed; /* Use fixed to keep it relative to the viewport */
+    top: 10px;
+    width: 100%; /* Ensure it spans the full width */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Push arrows to the left and right */
+    font-size: 3.5rem;
+    padding: 0 20px; /* Add padding for spacing */
+    box-sizing: border-box;
+}
+
+.prev, .next {
+    text-decoration: none;
+    color: blue;
+}
+
+.prev:hover, .next:hover {
+    text-decoration: underline; /* Add hover effect */
 }

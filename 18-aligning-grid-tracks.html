@@ -3,39 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naming and positioning items by grid areas</title>
+    <title>Aligning Grid Tracks</title>
     <link rel="stylesheet" href="css-reset.css">
     <link rel="stylesheet" href="style.css">
     <style>
         .grid-container {
             display: grid;
 
-            grid-template-areas:   "header header"
-                        "content sidebar"
-                        "footer footer";
-            grid-template-rows:    150px 1fr 100px;
-            grid-template-columns: 1fr 200px;
+            width: 100%;
+            height: 300px;
+            grid-template-columns: repeat(4, 45px);
+            grid-template-rows: repeat(4, 45px);
+            grid-gap: 0.5em;
+            justify-content: start;
+            align-content: space-evenly;
         }
-        
 
-        .moveable1 {
-            grid-row-start:    header;
-            grid-row-end:      header;
-            grid-column-start: header;
-            grid-column-end:   header;
+        body {
+            font-size: 1rem;
         }
-        .moveable2 {
-            grid-area: footer;
-        }
-        .moveable3 {
-            grid-area: sidebar;
-        }
-        .moveable4 {
-            grid-area: content;
+        .navigation {
+            font-size: 3.5rem;
         }
     </style>
 </head>
 <body>
+    <div class="navigation">
+        <a href="17-aligning-items.html" class="prev">←</a>
+        <div class="next"></div>
+    </div>
     <main>
         <div class="grid-container">
             <div class="grid-item">1</div>
@@ -49,10 +45,11 @@
             <div class="grid-item">9</div>
             <div class="grid-item">10</div>
             <div class="grid-item">11</div>
-            <div class=" moveable4 grid-item">12</div>
-            <div class=" moveable1 grid-item">13</div>
-            <div class=" moveable2 grid-item">14</div>
-            <div class=" moveable3 grid-item">15</div> 
+            <div class="grid-item">12</div>
+            <div class="grid-item">13</div>
+            <div class="grid-item">14</div>
+            <div class="grid-item">15</div>
+            <div class="grid-item">16</div>
         </div>
     </main>
 </body>

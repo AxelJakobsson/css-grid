@@ -3,28 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid-line-positioning</title>
+    <title>Positioning Items by Line Names</title>
     <link rel="stylesheet" href="css-reset.css">
     <link rel="stylesheet" href="style.css">
     <style>
         .grid-container {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-rows:     [row-start row-1-start] 1fr [row-1-end row-2-start] 1fr [row-2-end row-3-start] 1fr [row-3-end row-4-start] 1fr [row-4-end row-end];
+            grid-template-columns:  [col-start col-1-start] 1fr [col-1-end col-2-start] 1fr [col-2-end col-3-start] 1fr [col-3-end col-4-start] 1fr [col-4-end col-end];
         }
 
 
         .movable {
-            grid-row-start:    2;
-            grid-row-end:      3;
-            grid-column-start: 2;
-            grid-column-end:   3;
+            grid-row: row-2-start / row-end;
+            grid-column: col-start / col-2-end;
             background-color: rgb(24, 167, 124);
         }
 
     </style>
 </head>
 <body>
+    <div class="navigation">
+        <a href="08-naming-grid-lines.html" class="prev">←</a>
+        <a href="10-same-line-names.html" class="next">→</a>
+    </div>    
     <main>
         <div class="grid-container teal-color">
             <div class="grid-item">1</div>

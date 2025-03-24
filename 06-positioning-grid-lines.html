@@ -3,24 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Implicitly Named Grid Areas</title>
+    <title>Grid-line-positioning</title>
     <link rel="stylesheet" href="css-reset.css">
     <link rel="stylesheet" href="style.css">
     <style>
         .grid-container {
             display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
 
-            grid-template-rows:    [outer-start] 1fr [inner-start] 1fr [inner-end] 1fr [outer-end];
-            grid-template-columns: [outer-start] 1fr [inner-start] 1fr [inner-end] 1fr [outer-end];
+
+        .movable {
+            grid-row-start:    2;
+            grid-row-end:      3;
+            grid-column-start: 2;
+            grid-column-end:   3;
+            background-color: rgb(24, 167, 124);
         }
-        .moveable {
-            grid-area: inner;
-        }
+
     </style>
 </head>
 <body>
+    <div class="navigation">
+        <a href="05-grid-gaps.html" class="prev">←</a>
+        <a href="07-spanning-items.html" class="next">→</a>
+    </div>
     <main>
-        <div class="grid-container">
+        <div class="grid-container teal-color">
             <div class="grid-item">1</div>
             <div class="grid-item">2</div>
             <div class="grid-item">3</div>
@@ -29,7 +39,10 @@
             <div class="grid-item">6</div>
             <div class="grid-item">7</div>
             <div class="grid-item">8</div>
-            <div class="moveable grid-item">9</div>
+            <div class="grid-item">9</div>
+            <div class="grid-item">10</div>
+            <div class="grid-item">11</div>
+            <div class="movable grid-item">12</div>
         </div>
     </main>
 </body>
