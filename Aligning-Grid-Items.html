@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aligning Grid Items</title>
+    <link rel="stylesheet" href="css-reset.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .grid-container {
+            display: grid;
+
+            grid-template-rows: 80px 80px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "content content"
+                                 "content content";
+            justify-items: stretch;
+            align-items: stretch;
+        }
+
+        .grid-item {
+            grid-area: content;
+        }
+        .grid-item:nth-child(1) {
+            justify-self: start;
+            align-self: start;
+        }
+        .grid-item:nth-child(2) {
+            justify-self: center;
+            align-self: center;
+        }
+        .grid-item:nth-child(3) {
+            justify-self: end;
+            align-self: end;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="grid-container">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <!-- <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>
+            <div class="grid-item">10</div>
+            <div class="grid-item">11</div>
+            <div class="grid-item">12</div>
+            <div class="grid-item">13</div>
+            <div class="grid-item">14</div>
+            <div class="grid-item">15</div> -->
+        </div>
+    </main>
+</body>
+</html>
