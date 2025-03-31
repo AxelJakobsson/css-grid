@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    place-items: center;
+    line-height: normal;
+    height: 200vh;
+
+    font-size: 1rem;
+}
+
+main {
+    min-height: 95vh;
+    min-width: 40vw;
+    max-height: 110vh;
+    max-width: 50vw;
+
+    border: 1px solid black;
+}
+
+.grid {
+    display: grid;
+
+    grid-template-rows: repeat(100, 1fr);
+    grid-template-columns: repeat(100, 1fr);
+    /* grid-gap: 1em; */
+
+}
+
+
+.grid-item {
+    background-color: #e91e63;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid white;
+    border-radius: .2rem;
+}
